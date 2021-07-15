@@ -14,7 +14,7 @@ namespace WildKobold
                 // Return true if the kobold is untrained or outside of the home area.
             {
                 return pawn.training == null ||
-                       !pawn.training.HasLearned(DefDatabase<TrainableDef>.GetNamed("Obedience")) ||
+                       !pawn.training.HasLearned(DefDatabase<TrainableDef>.GetNamed("Tameness")) ||
                        !pawn.Map.areaManager.Home.ActiveCells.Contains(pawn.Position);
             }
 
