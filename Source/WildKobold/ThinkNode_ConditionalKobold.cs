@@ -10,8 +10,8 @@ internal class ThinkNode_ConditionalKobold : ThinkNode_Conditional
     protected override bool Satisfied(Pawn pawn)
     {
         // If we're dealing with a kobold.
-        if (pawn.def != null && pawn.def.defName == "Kobold" && !pawn.GetRegion().touchesMapEdge)
-            // Return true if the kobold is untrained or outside of the home area.
+        if (pawn.def is { defName: "Kobold" } && !pawn.GetRegion().touchesMapEdge)
+            // Return true if the kobold is untrained or outside the home area.
         {
             return pawn.training == null ||
                    !pawn.training.HasLearned(DefDatabase<TrainableDef>.GetNamed("Tameness")) ||
