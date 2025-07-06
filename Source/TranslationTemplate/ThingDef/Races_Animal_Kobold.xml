@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Kobold -->
+  <Kobold.label>Kobold</Kobold.label>
+  <!-- EN: A standard kobold, adept at digging and being sneaky. Adorabold. -->
+  <Kobold.description>A standard kobold, adept at digging and being sneaky. Adorabold.</Kobold.description>
+  <!-- EN: Kobold Meat -->
+  <Kobold.race.meatLabel>Kobold Meat</Kobold.race.meatLabel>
+  <!-- EN: left paw -->
+  <Kobold.tools.left_paw.label>left paw</Kobold.tools.left_paw.label>
+  <!-- EN: right paw -->
+  <Kobold.tools.right_paw.label>right paw</Kobold.tools.right_paw.label>
+  <!-- EN: teeth -->
+  <Kobold.tools.teeth.label>teeth</Kobold.tools.teeth.label>
+  <!-- EN: head -->
+  <Kobold.tools.head.label>head</Kobold.tools.head.label>
+</LanguageData>

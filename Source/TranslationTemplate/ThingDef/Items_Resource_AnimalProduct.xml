@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: kobold egg (fert.) -->
+  <EggKoboldFertilized.label>kobold egg (fert.)</EggKoboldFertilized.label>
+  <!-- EN: Fertilized kobold egg. If all goes well, it should hatch into a baby 'bold. It's not very tasty at the best of times, but you'd still be better off cooking it. -->
+  <EggKoboldFertilized.description>Fertilized kobold egg. If all goes well, it should hatch into a baby 'bold. It's not very tasty at the best of times, but you'd still be better off cooking it.</EggKoboldFertilized.description>
+  <!-- EN: kobold egg (unfert.) -->
+  <EggKoboldUnfertilized.label>kobold egg (unfert.)</EggKoboldUnfertilized.label>
+  <!-- EN: Unfertilized kobold egg. It's not very tasty at the best of times, but you'd still be better off cooking it. -->
+  <EggKoboldUnfertilized.description>Unfertilized kobold egg. It's not very tasty at the best of times, but you'd still be better off cooking it.</EggKoboldUnfertilized.description>
+  <!-- EN: kobold leather -->
+  <Leather_WildKobold.label>kobold leather</Leather_WildKobold.label>
+  <!-- EN: The tanned skin of a standard kobold, you monster. -->
+  <Leather_WildKobold.description>The tanned skin of a standard kobold, you monster.</Leather_WildKobold.description>
+</LanguageData>

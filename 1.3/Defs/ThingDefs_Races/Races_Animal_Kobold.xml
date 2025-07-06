@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- KOBOLD BASE -->
+  <ThingDef Name="ThingBaseKobold" ParentName="AnimalThingBase" Abstract="True">
+    <statBases>
+      <MoveSpeed>3.3</MoveSpeed>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <MarketValue>55</MarketValue>
+      <MeatAmount>40</MeatAmount>
+      <LeatherAmount>40</LeatherAmount>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>EggKoboldFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>10</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>
+          <min>3</min>
+          <max>6</max>
+        </eggCountRange>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>left paw</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>0.75</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>1</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right paw</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>0.75</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>1</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>5</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.07</chanceFactor>
+        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>5</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <wildBiomes>
+        <TropicalRainforest>1.0</TropicalRainforest>
+        <TemperateForest>1.0</TemperateForest>
+        <BorealForest>1.0</BorealForest>
+        <Tundra>1.0</Tundra>
+        <Desert>1.0</Desert>
+      </wildBiomes>
+      <body>QuadrupedAnimalWithPaws</body>
+      <predator>false</predator>
+      <petness>0.45</petness>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHungerRate>0.05</baseHungerRate>
+      <baseHealthScale>0.40</baseHealthScale>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <gestationPeriodDays>5</gestationPeriodDays>
+      <nameOnTameChance>0.4</nameOnTameChance>
+      <trainability>Advanced</trainability>
+      <wildness>0.15</wildness>
+      <mateMtbHours>8</mateMtbHours>
+      <manhunterOnDamageChance>0.01</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.0</manhunterOnTameFailChance>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 0.3)</li>
+          <li>(2, 13)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>5</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Kobold_Wounded</soundWounded>
+          <soundCall>Pawn_Kobold_Call</soundCall>
+          <soundDeath>Pawn_Kobold_Death</soundDeath>
+          <soundAngry>Pawn_Kobold_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalCommon</li>
+    </tradeTags>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBase" Name="AnimalKindBaseKobold" Abstract="True">
+    <combatPower>2</combatPower>
+    <wildGroupSize>
+      <min>8</min>
+      <max>15</max>
+    </wildGroupSize>
+    <ecoSystemWeight>1</ecoSystemWeight>
+  </PawnKindDef>
+  <!--	BASE KOBOLD -->
+  <ThingDef ParentName="ThingBaseKobold">
+    <defName>Kobold</defName>
+    <label>Kobold</label>
+    <description>A standard kobold, adept at digging and being sneaky. Adorabold.</description>
+    <race>
+      <meatLabel>Kobold Meat</meatLabel>
+      <leatherDef>Leather_WildKobold</leatherDef>
+    </race>
+  </ThingDef>
+  <PawnKindDef ParentName="AnimalKindBaseKobold">
+    <defName>Kobold</defName>
+    <label>Kobold</label>
+    <labelPlural>Kobolds</labelPlural>
+    <race>Kobold</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Kobold/Kobold</texPath>
+          <drawSize>0.7</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chinchilla/Dessicated_Chinchilla</texPath>
+          <drawSize>0.75</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

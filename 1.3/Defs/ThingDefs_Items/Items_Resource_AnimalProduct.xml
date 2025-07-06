@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Chicken -->
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EggKoboldUnfertilized</defName>
+    <label>kobold egg (unfert.)</label>
+    <description>Unfertilized kobold egg. It's not very tasty at the best of times, but you'd still be better off cooking it.</description>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>3.0</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggKoboldFertilized</defName>
+    <label>kobold egg (fert.)</label>
+    <description>Fertilized kobold egg. If all goes well, it should hatch into a baby 'bold. It's not very tasty at the best of times, but you'd still be better off cooking it.</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>5.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>3.5</hatcherDaystoHatch>
+        <hatcherPawn>Kobold</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_WildKobold</defName>
+    <label>kobold leather</label>
+    <description>The tanned skin of a standard kobold, you monster.</description>
+    <statBases>
+      <MarketValue>1.1</MarketValue>
+      <StuffPower_Insulation_Cold>2</StuffPower_Insulation_Cold>
+    </statBases>
+    <graphicData>
+      <color>(100,30,30)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(100,30,30)</color>
+    </stuffProps>
+  </ThingDef>
+</Defs>

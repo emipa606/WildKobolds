@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- KOBOLD BASE -->
   <ThingDef Name="ThingBaseKobold" ParentName="AnimalThingBase" Abstract="True">
@@ -8,9 +8,11 @@
       <MarketValue>55</MarketValue>
       <MeatAmount>40</MeatAmount>
       <LeatherAmount>40</LeatherAmount>
+      <Wildness>0.15</Wildness>
     </statBases>
     <comps>
       <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>EggKoboldUnfertilized</eggUnfertilizedDef>
         <eggFertilizedDef>EggKoboldFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>10</eggLayIntervalDays>
@@ -106,7 +108,6 @@
       <gestationPeriodDays>5</gestationPeriodDays>
       <nameOnTameChance>0.4</nameOnTameChance>
       <trainability>Advanced</trainability>
-      <wildness>0.15</wildness>
       <mateMtbHours>8</mateMtbHours>
       <manhunterOnDamageChance>0.01</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.0</manhunterOnTameFailChance>

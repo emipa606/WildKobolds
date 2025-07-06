@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThinkTreeDef>
+    <defName>KoboldMining</defName>
+    <insertTag>Animal_PreWander</insertTag>
+    <insertPriority>100</insertPriority>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="WildKobold.ThinkNode_ConditionalKobold">
+          <subNodes>
+            <li Class="ThinkNode_ChancePerHour_Constant">
+              <mtbHours>4.0</mtbHours>
+              <subNodes>
+                <li Class="JobGiver_MineRandom" />
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>
